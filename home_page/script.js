@@ -92,6 +92,12 @@ const movies = [
     }
     // Add more movies as needed
 ];
+// function initializeMovies() {
+//     if (!localStorage.getItem('movies')) {
+//         localStorage.setItem('movies', JSON.stringify(movies));
+//     }
+// };
+// initializeMovies();
 function displayMovies() {
     const movieContainer = document.querySelector('.cards');
     movieContainer.innerHTML = ''; // Clear existing content
