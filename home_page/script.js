@@ -43,7 +43,7 @@ function updateButtonVisibility() {
 function logout() {
     localStorage.removeItem('userRole');
     // localStorage.removeItem('userRole');
-    window.location.href = '/login_page/index.html';
+    window.location.href = '/index.html';
 }
 
 function toggleModal() {

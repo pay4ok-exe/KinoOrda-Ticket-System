@@ -25,6 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem('users', JSON.stringify(users));
 
         alert('Registration successful!');
-        window.location.href = '/login_page/index.html'; // Redirect to login page after signup
+        window.location.href = '/index.html'; // Redirect to login page after signup
     });
 });
