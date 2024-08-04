@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/home_page/style.css">
+    <title>KinoOrda Movies</title>
+    <link rel="icon" type="image/png" href="/img/icon.png">
+</head>
+<body>
+    <nav>
+        <a href="/home_page/index.html"><span>KinoOrda</span> Cinema</a>
+        <div class="user-info">
+            <span id="userRoleDisplay">User</span>  <!-- Initially set to a default value -->
+            <button id="logoutButton">Log out</button>
+        </div>
+    </nav>  
+
+    <div class="cards">
+        <!-- Example movie card, repeat or dynamically generate similar cards as needed -->
+        <!-- <div class="card">
+            <img src="${movie.image}" alt="${movie.title}">
+            <h3>${movie.title}</h3>
+            <p>${movie.description}</p>
+            <button class="user-btn">Book Ticket</button>
+            <button class="admin-btn" data-id="${movie.id}">Delete</button>
+        </div> -->
+
+        <!-- Additional cards can be added following the same structure -->
+    </div>
+
+    <div class="add-movie-button">
+        <button onclick="toggleModal()">Add Movie +</button>
+    </div>
+
+    <div id="addMovieModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleModal()">&times;</span>
+            <form id="addMovieForm" action="/upload" method="post" enctype="multipart/form-data">
+                <label for="movieImage">Movie Image:</label>
+                <input type="file" id="movieImage" name="movieImage">
+                
+                <label for="movieTitle">Title:</label>
+                <input type="text" id="movieTitle" name="movieTitle" placeholder="Enter title">
+                
+                <label for="movieDescription">Description:</label>
+                <textarea id="movieDescription" name="movieDescription" placeholder="Enter description"></textarea>
+                
+                <label for="moviePrice">Price:</label>
+                <input type="text" id="moviePrice" name="moviePrice" placeholder="Enter price">
+
+                <button type="submit">Add Movie</button>
+            </form>
+            
+        </div>
+    </div>
+
+    <script src="/home_page/script.js"></script>
+
+</body>
+</html>

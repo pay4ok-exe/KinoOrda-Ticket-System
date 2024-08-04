@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1f2025;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    min-height: 100vh;
+}
+
+nav {
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(28, 29, 34, 0.8);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin: 25px;
+    background: #2e3037;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    justify-content: space-between;
+}
+
+.user-info span {
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #5372F0;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #4056a1;
+}
+
+.cards {
+    display: flex;
+    max-width: 1200px; 
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    width: 200px;
+    margin: 15px;
+    background: #2e3037;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px;
+}
+
+.card p {
+    padding: 0 10px 10px;
+    font-size: 14px;
+}
+
+.admin-btn,
+.user-btn {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.admin-controls button,
+.admin-btn {
+    background-color: #e63946; /* Red for admin controls */
+}
+
+.user-controls button,
+.user-btn {
+    background-color: #a8dadc; /* Light blue for user controls */
+    color: #1d3557;
+}
+
+.user-btn:hover,
+.admin-btn:hover {
+    opacity: 0.9;
+}
+
+.add-movie-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.add-movie-button button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background for the add button */
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-movie-button button:hover {
+    background-color: #45a049;
+}
+
+
+/* Overlay and Modal container when inactive */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column; /* Ensure elements stack vertically */
+    align-items: center; /* Center-align items for consistency */
+    position: relative;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    transform: scale(1.1);
+    opacity: 0;
+}
+.modal-content form {
+    width: 100%; /* Use the full width of the modal content */
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center; /* Center-align form elements */
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="file"],
+.modal-content textarea {
+    width: 100%; /* Full width to fill the form */
+    padding: 10px;
+    margin-top: 8px; /* Consistent margin for all inputs */
+    border-radius: 5px;
+    border: 1px solid #555; /* Enhance visibility */
+    background: #222;
+    color: #ddd;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #4CAF50; /* Consistent with your 'Add Movie +' button */
+    border: none;
+    border-radius: 5px;
+    width: auto; /* Auto width based on content */
+    cursor: pointer;
+}
+
+/* Adjustments when the modal is active */
+.modal.active {
+    display: flex; /* Makes the modal display */
+}
+
+.modal.active .modal-content {
+    transform: scale(1); /* Scale to normal size */
+    opacity: 1; /* Fully opaque */
+}
+
+/* Close button styling */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ccc;
+}
