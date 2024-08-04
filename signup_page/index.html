@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KinoOrda - Login</title>
+    <link rel="stylesheet" href="/login_page/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="icon" type="image/png" href="/img/icon.png">
+</head>
+
+<body>
+    <nav>
+        <a href="/login_page/index.html"><span>KinoOrda</span> Ticketon</a>
+    </nav>
+    <div class="wrapper">
+        <header>Login Form</header>
+        <form action="#" novalidate>
+            <div class="field email">
+                <div class="input-area">
+                    <input type="text" placeholder="Login">
+                    <i class="icon fas fa-envelope"></i>
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+                <div class="error error-txt">Login can't be blank</div>
+            </div>
+            <div class="field password">
+                <div class="input-area">
+                    <input type="password" placeholder="Password">
+                    <i class="icon fas fa-lock"></i>
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+                <div class="error error-txt">Password can't be blank</div>
+            </div>
+            <!-- <div class="pass-txt"><a href="#">Forgot password?</a></div> -->
+            <input type="submit" value="Login">
+        </form>
+        <div class="sign-txt">Not yet member? <a href="/login_page/signup_page.html">Signup now</a></div>
+    </div>
+
+    <script src="/login_page/script.js"></script>
+
+</body>
+
+</html>

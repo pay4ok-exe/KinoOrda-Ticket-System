@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KinoOrda - Signup</title>
+    <link rel="stylesheet" href="/login_page/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="icon" type="image/png" href="/img/icon.png">
+</head>
+<body>
+    <nav>
+        <a href="/login_page/index.html"><span>KinoOrda</span> Ticketon</a>
+    </nav>
+    <div class="wrapper">
+        <header>Signup Form</header>
+        <form id="signupForm" action="#" novalidate>
+            <div class="field email">
+                <div class="input-area">
+                    <input type="email" placeholder="Login" required>
+                    <i class="icon fas fa-envelope"></i>
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+                <div class="error error-txt">Login can't be blank</div>
+            </div>
+            <div class="field password">
+                <div class="input-area">
+                    <input type="text" placeholder="Password" required>
+                    <i class="icon fas fa-lock"></i>
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+                <div class="error error-txt">Password can't be blank</div>
+            </div>
+            <input type="submit" value="Signup">
+        </form>
+        <div class="sign-txt">Already a member? <a href="/login_page/index.html">Login now</a></div>
+    </div>
+
+    <script src="/login_page/signup_page.js"></script>
+</body>
+</html>
